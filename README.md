@@ -22,14 +22,14 @@ A complete REST API server with customer and product endpoints, using Prometheus
 
 ## Overview
 
-This project provides a Node.js Express API server with customer and product management functionality. The server includes comprehensive monitoring using Prometheus for metrics collection and Grafana for visualization. This is perfect for learning about API development and modern monitoring practices.
+This project provides a Node.js Express API server with customer and product management functionality. The server includes comprehensive monitoring using Prometheus for metrics collection and Grafana for visualization.
 
 ## Features
 
 - **RESTful API**: Standard CRUD operations for customers and products
 - **Express.js**: Fast, unopinionated web framework for Node.js
 - **Prometheus Integration**: Metrics collection for monitoring key performance indicators
-- **Grafana Dashboards**: Beautiful visualizations of API performance metrics
+- **Grafana Dashboards**: Visualizations of API performance metrics
 - **Docker Compose**: Easy setup of the entire stack with a single command
 - **Metrics Collection**: Track request rates, latency, error rates, and business operations
 
@@ -52,7 +52,7 @@ This project provides a Node.js Express API server with customer and product man
    npm start
    ```
 
-   The server runs on port 3000 by default. You can change this by setting the PORT environment variable.
+   The server runs on port `3000` by default. You can change this by setting the PORT environment variable.
 
 ### Docker Compose Setup
 
@@ -107,7 +107,7 @@ The API server collects the following metrics:
 
 ### Using Prometheus
 
-Prometheus is a powerful monitoring system and time-series database.
+Prometheus is a monitoring system and time-series database.
 
 1. **Access the Prometheus UI**: Open http://localhost:9090 in your browser
 
@@ -140,7 +140,7 @@ Prometheus is a powerful monitoring system and time-series database.
 
 ### Using Grafana Dashboards
 
-Grafana provides beautiful, customizable dashboards for your metrics.
+Grafana provides customizable dashboards for your metrics.
 
 1. **Access Grafana**: Open http://localhost:3001 in your browser
 
@@ -272,7 +272,7 @@ If you're still seeing empty query results:
    histogram_quantile(0.95, sum(rate(http_request_duration_ms_bucket[5m])) by (le, route))
    ```
 
-Remember: Prometheus tracks data over time, so you need to make several API requests and wait for scraping to occur before you'll see meaningful trends in your graphs!
+`Remember`: Prometheus tracks data over time, so you need to make several API requests and wait for scraping to occur before you'll see meaningful trends in your graphs!
 
 ![Grafana Dashboard](images/grafana_metrics.jpg)
 
@@ -339,4 +339,4 @@ curl -X POST http://localhost:3002/products \
 curl http://localhost:3002/products
 ```
 
-Run these commands multiple times to generate data for your metrics visualizations. Then check Prometheus or Grafana to see the results. 
+`Note`:Run these commands multiple times to generate data for your metrics visualizations. Then check Prometheus or Grafana to see the results. 
