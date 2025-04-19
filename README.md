@@ -163,6 +163,8 @@ Grafana provides beautiful, customizable dashboards for your metrics.
    - Configure each panel with Prometheus queries
    - Save your custom dashboard
 
+![Prometheus Dashboard](images/prometheus_dashboard.jpg)
+
 ## Prometheus Query Guide
 
 ### Guaranteed Working Queries
@@ -271,6 +273,8 @@ If you're still seeing empty query results:
    ```
 
 Remember: Prometheus tracks data over time, so you need to make several API requests and wait for scraping to occur before you'll see meaningful trends in your graphs!
+
+![Grafana Dashboard](images/grafana_metrics.jpg)
 
 ## Troubleshooting
 
